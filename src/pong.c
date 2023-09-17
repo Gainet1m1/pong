@@ -7,29 +7,34 @@ void Draw(int xBall, int yBall, int topPlayerOneRacket, int midPlayerOneRacket, 
           int playerTwoScore);
 
 int main() {
-    //  z = left up, c = left down, a = right up, d = right down;
-    int xBall = 1;
-    int yBall = 15;
+    //  z = left up, c = left down, a = right up, d = right down; начало игры мяча
+    int xBall = 40;
+    int yBall = 12;
 
+
+//рокетка 1 из трех координат
     int topPlayerOneRacket = 14;
     int midPlayerOneRacket = 15;
     int bottomPlayerOneRacket = 16;
 
+//рокетка 2
     int topPlayerTwoRacket = 14;
     int midPlayerTwoRacket = 15;
     int bottomPlayerTwoRacket = 16;
 
+
+//счет
     int playerOneScore = 0;
     int playerTwoScore = 0;
 
     char moveBall = 'a';
 
-    printf("\033[0D\033[2J");
-    printf("\n");
-    printf("                                Rules\n");
+    //printf("\033[0D\033[2J");
+    //printf("\n");
+    //printf("                                Rules\n");
     printf("To move the rackets use A/Z for Player 1 and K/M for Player 2, ");
-    printf("to skip an action\nuse Space Bar. ");
-    printf("The game ends when one of the players scores 21 points.\n");
+    //printf("to skip an action\nuse Space Bar. ");
+    //printf("The game ends when one of the players scores 21 points.\n");
 
     Draw(xBall, yBall, topPlayerOneRacket, midPlayerOneRacket, bottomPlayerOneRacket, topPlayerTwoRacket,
          midPlayerTwoRacket, bottomPlayerTwoRacket, playerOneScore, playerTwoScore);
@@ -131,7 +136,7 @@ int main() {
                 bottomPlayerTwoRacket = 16;
 
                 if (playerTwoScore == 1) {
-                    printf("\033[0D\033[2J");
+                   // printf("\033[0D\033[2J");
                     printf(
         " ------------------------------------------------------------------"
         " Player 2 WIN!!!"
